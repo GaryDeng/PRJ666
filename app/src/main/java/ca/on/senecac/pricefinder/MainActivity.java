@@ -55,8 +55,8 @@ public class MainActivity extends Activity implements OnClickListener, OnItemCli
     	if(0 == result.getItems().size()){
     		Toast.makeText(this, "NO Result", Toast.LENGTH_SHORT).show();
     	}
-    	TutorialsInfoAdapter tutorialsInfoAdapter = new TutorialsInfoAdapter(this, result.getItems());
-        lvResults.setAdapter(tutorialsInfoAdapter);
+    	SearchResultsAdapter searchResultsAdapter = new SearchResultsAdapter(this, result.getItems());
+        lvResults.setAdapter(searchResultsAdapter);
 	}
 
 	public void init(){

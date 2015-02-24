@@ -1,7 +1,5 @@
 package ca.on.senecac.pricefinder;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.List;
+
 import ca.on.senecac.pricefinder.bean.Item;
 
-public class TutorialsInfoAdapter extends BaseAdapter {
+public class SearchResultsAdapter extends BaseAdapter {
 
 	private Context context;
 	private final List<Item> items;
 	
-	public TutorialsInfoAdapter(Context context, List<Item> items){
+	public SearchResultsAdapter(Context context, List<Item> items){
 		this.context = context;
 		this.items = items;
 	}
@@ -54,7 +54,6 @@ public class TutorialsInfoAdapter extends BaseAdapter {
 			
 			TextView tvSnippet = (TextView)rowLayout.findViewById(R.id.tvSnippet);
 			tvSnippet.setText(item.getSnippet());
-			
 			convertView = rowLayout;
 		}
 		
